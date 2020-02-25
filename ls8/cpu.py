@@ -60,13 +60,13 @@ class CPU:
 
       
 
-    def alu(self, op, reg_a, reg_b):
-        """ALU operations."""
+    def alu(self, operation, int_a, int_b):
+        
 
-        if op == "ADD":
-            self.reg[reg_a] += self.reg[reg_b]
-        elif op == "MUL":
-            self.reg[reg_a] = (self.reg[reg_a] * self.reg[reg_b])
+        if operation == "ADD":
+            self.reg[int_a] += self.reg[int_b]
+        elif operation == "MUL":
+            self.reg[int_a] = (self.reg[int_a] * self.reg[int_b])
         else:
             raise Exception("Unsupported ALU operation")
 
